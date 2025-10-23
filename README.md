@@ -7,6 +7,7 @@ Beyond traditional retail analytics, the system integrates location tracking and
 
 
 
+   
 ✨ Key Features
 
 📈 Real-Time KPI Monitoring – Track sales, revenue, and inventory metrics instantly.
