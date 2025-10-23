@@ -23,13 +23,6 @@ Beyond traditional retail analytics, the system integrates location tracking and
 
 
 
-🏗️ Tech Stack
-Category	              Technology
-Frontend	              React, TypeScript, Redux / Zustand, Chart.js or Recharts
-Backend               	  Node.js, Express, MongoDB / PostgreSQL
-Deployment	              Vercel
-
-
 
 
 🧩 Future Enhancements
