@@ -1,0 +1,64 @@
+/* General body style */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+h1 {
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation links */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background-color: #8884d8;
+  color: white;
+}
+
+/* Page headings */
+h2 {
+  text-align: center;
+  color: #444;
+  margin-top: 40px;
+}
+
+h3 {
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Chart containers */
+.recharts-wrapper {
+  display: flex !important;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+}
+
+/* Responsive charts */
+@media (max-width: 600px) {
+  .recharts-wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+  }
+}

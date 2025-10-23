@@ -1,0 +1,61 @@
+/* Centers the whole page content */
+.pageContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;  /* Dark background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The box holding the chart + title + legend */
+.chartContainer {
+  background-color: #1e293b;  /* Dark slate */
+  border-radius: 24px;
+  padding: 40px 48px;
+  width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title on top */
+.title {
+  color: #e0e7ff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  user-select: none;
+}
+
+/* Legend container below the chart */
+.legend {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each legend item */
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+/* The color block next to legend text */
+.legendColor {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  margin-right: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}

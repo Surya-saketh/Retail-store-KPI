@@ -1,0 +1,70 @@
+/* src/pages/Dashboard.module.css */
+.dashboard {
+  padding: 20px;
+  background-color: #0a0f1f;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.navButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.navButtons button {
+  background-color: #1d2335;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navButtons button:hover {
+  background-color: #2e3650;
+}
+
+.timeToggle {
+  background-color: #292f45;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.chartSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.salesTrend, .salesByCategory {
+  background-color: #13192d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.salesTrend h2, .salesByCategory h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}

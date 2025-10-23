@@ -1,0 +1,12 @@
+.chartWrapper {
+  background-color: #1a1f2e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: white;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
