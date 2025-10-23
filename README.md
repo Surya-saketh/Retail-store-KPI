@@ -5,6 +5,8 @@ Real-Time Retail KPI Dashboard is a data-driven analytics platform designed to h
 
 Beyond traditional retail analytics, the system integrates location tracking and intelligent product recommendations to ensure stores stay well-stocked and aligned with customer demand. This helps prevent out-of-stock issues, reduce waste, and increase profitability.
 
+
+
 ✨ Key Features
 
 📈 Real-Time KPI Monitoring – Track sales, revenue, and inventory metrics instantly.
@@ -19,11 +21,15 @@ Beyond traditional retail analytics, the system integrates location tracking and
 
 ⚙️ Scalable Architecture – Built with modern web technologies for performance and extensibility.
 
+
+
 🏗️ Tech Stack
 Category	              Technology
 Frontend	              React, TypeScript, Redux / Zustand, Chart.js or Recharts
 Backend               	Node.js, Express, MongoDB / PostgreSQL
 Deployment	            Vercel
+
+
 
 
 🧩 Future Enhancements
