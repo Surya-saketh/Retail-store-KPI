@@ -1,0 +1,328 @@
+.billingPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.productSearch {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.productSearch h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.suggestion:hover {
+  background-color: #f8f9fa;
+}
+
+.suggestion:last-child {
+  border-bottom: none;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.productName {
+  font-weight: 600;
+  color: #333;
+}
+
+.productPrice {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.productStock {
+  font-size: 12px;
+  color: #666;
+}
+
+.billSection {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.billHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.billHeader h2 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.clearButton {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.clearButton:hover {
+  background: #c53030;
+}
+
+.emptyBill {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.billItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.billItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itemName {
+  font-weight: 600;
+  color: #333;
+}
+
+.itemPrice {
+  font-size: 14px;
+  color: #666;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.quantityButton:hover {
+  background: #667eea;
+  color: white;
+}
+
+.quantity {
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+.itemTotal {
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+.removeButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e53e3e;
+  background: white;
+  color: #e53e3e;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.removeButton:hover {
+  background: #e53e3e;
+  color: white;
+}
+
+.billFooter {
+  border-top: 2px solid #e1e5e9;
+  padding-top: 20px;
+}
+
+.totalSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalAmount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.createBillButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.createBillButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.createBillButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  background-color: #fee;
+  color: #c53030;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.success {
+  background-color: #f0fff4;
+  color: #38a169;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #9ae6b4;
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .billItem {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .totalSection {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .createBillButton {
+    width: 100%;
+  }
+}

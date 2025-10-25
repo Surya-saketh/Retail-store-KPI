@@ -3,12 +3,23 @@ const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 
+// Import database initialization and routes
+const { initDatabase } = require('./database/init');
+const database = require('./database/connection');
+const authRoutes = require('./routes/auth');
+const productRoutes = require('./routes/products');
+const billingRoutes = require('./routes/billing');
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // frontend origin
+  origin: ['http://localhost:3000', 'http://localhost:3001'], // frontend origins
 }));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Rule-based product recommendation system
 const getProductRecommendations = (currentWeather, forecast) => {
@@ -174,6 +185,54 @@ app.get('/api/location', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// API Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/billing', billingRoutes);
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'Retail KPI Backend Server is running',
+    timestamp: new Date().toISOString()
+  });
 });
+
+// Initialize database and start server
+const startServer = async () => {
+  try {
+    // Initialize database
+    await initDatabase();
+    await database.connect();
+    
+    console.log('Database initialized successfully');
+    
+    app.listen(PORT, () => {
+      console.log(`🚀 Retail KPI Backend Server running on port ${PORT}`);
+      console.log(`📊 Weather API: http://localhost:${PORT}/api/location`);
+      console.log(`🔐 Authentication: http://localhost:${PORT}/api/auth`);
+      console.log(`📦 Products: http://localhost:${PORT}/api/products`);
+      console.log(`💰 Billing: http://localhost:${PORT}/api/billing`);
+      console.log(`❤️ Health Check: http://localhost:${PORT}/api/health`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
+};
+
+// Handle graceful shutdown
+process.on('SIGINT', async () => {
+  console.log('\n🛑 Shutting down server...');
+  try {
+    await database.close();
+    console.log('Database connection closed');
+    process.exit(0);
+  } catch (error) {
+    console.error('Error during shutdown:', error);
+    process.exit(1);
+  }
+});
+
+startServer();
