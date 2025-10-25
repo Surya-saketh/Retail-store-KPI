@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "frontend/build",
   "devCommand": "cd frontend && npm start",
-  "installCommand": "npm install && cd frontend && npm install && cd ../backend && npm install",
+  "installCommand": "npm install && cd frontend && npm install --legacy-peer-deps && cd ../backend && npm install",
   "rewrites": [
     {
       "source": "/api/:path*",
